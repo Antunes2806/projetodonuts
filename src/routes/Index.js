@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../pages/Home";
+import HomeScreen from "../pages/Home";
 import Carrinho from "../pages/Carrinho";
 import Sobre from "../pages/Sobre";
 
@@ -10,33 +10,33 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
-import RotaDrawer from "../routes/RotaDrawer";
+import RotaDrawer from "./RotaStack";
 
 export default function RoutesTab() {
   return (
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: "#f2ece3",
-        tabBarInactiveTintColor: "white",
+        tabBarInactiveTintColor: "#FFFFFF",
         tabBarStyle: {
           backgroundColor: "#662520",
-          borderTopColor: "transparent",
-          padding: 3,
-          bottom: 50,
-          right: 15,
-          left: 15,
+          height: 50,
           position: "absolute",
-          borderRadius: 100,
-        height: 60,
+          bottom: 20,
+          right: 20,
+          left: 20,
+          borderTopEndRadius: 15,
+          borderTopColor: "transparent",
+          padding: 10,
+          shadowColor: "#662520",
           shadowOffset: {
             width: 0,
-            height: 10,
+            height: 4,
           },
-          shadowColor:"#662520",
-          shadowOpacity: 0.5,
-          shadowRadius: 6.65,
-          alignItems: "center",
-          alignContent: "center",
+          shadowOpacity: 0.3,
+          shadowRadius: 4.65,
+
+          elevation: 8,
         },
       }}
     >
@@ -48,9 +48,9 @@ export default function RoutesTab() {
           tabBarIcon: ({ color, size }) => {
             return <FontAwesome size={size} color={color} name="home" />;
           },
-          title: ""
+          title: "",
         }}
-        name="Home"
+        name="HomeScreen"
         component={RotaDrawer}
       />
       <Tab.Screen
@@ -59,7 +59,7 @@ export default function RoutesTab() {
           tabBarIcon: ({ color, size }) => {
             return <FontAwesome name="newspaper-o" size={size} color={color} />;
           },
-          title: ""
+          title: "",
         }}
         name="Sobre"
         component={Sobre}
@@ -73,7 +73,7 @@ export default function RoutesTab() {
               <MaterialIcons name="shopping-cart" size={size} color={color} />
             );
           },
-          title: ""
+          title: "",
         }}
         name="Carrinho"
         component={Carrinho}

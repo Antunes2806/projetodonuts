@@ -47,130 +47,223 @@ export default function Home() {
   const [texto, setTexto] = useState("");
   return (
     <View style={styles.container}>
-      <View style={styles.pesquisa}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            top: 80,
-            width: "100%",
-          }}
-        >
-          <TextInput
-            style={styles.input}
-            placeholder="Pesquisar"
-            value={texto}
-            onChangeText={(value) => setTexto(value)}
-          />
-
-          <Ionicons
-            name="search-circle-sharp"
-            size={50}
-            color="#f2ece3"
-            onPress={() => {}}
-          />
-        </View>
-        <View style={{ position: "relative", top: "30%" }}>
-          <Carousel
-            data={data}
-            renderItem={CarouselCardItem}
-            sliderWidth={390}
-            itemWidth={390}
-            autoplay={true}
-            autoplayInterval={3000}
-            loop={true}
-            layout={"tinder"}
-            layoutCardOffset={`9`}
-          />
-        </View>
-      </View>
-      <View style={{ flex: 1, padding: 10, marginTop: "25%" }}>
-        <TxtComponent txt="Categorias" styletxt={styles.txtproduto} />
-
-        <View style={styles.areaCategory}>
-          {/*produtos: donuts*/}
-          <View style={styles.productsCategory}>
-            <MaterialCommunityIcons
-              name="record-circle-outline"
-              size={24}
-              color="#f2ece3"
-            />
-            <Text style={{ color: "#f2ece3" }}>Donuts</Text>
-          </View>
-          {/*produtos: bolo*/}
-          <View style={styles.productsCategory}>
-            <FontAwesome6 name="cake-candles" size={24} color="#f2ece3" />
-            <Text style={{ color: "#f2ece3" }}>Bolo</Text>
-          </View>
-          {/*produtos: brownie*/}
-          <View style={styles.productsCategory}>
-            <Feather name="square" size={24} color="#f2ece3" />
-            <Text style={{ color: "#f2ece3" }}>brownie</Text>
-          </View>
-          {/*produtos: sorvete*/}
-          <View style={styles.productsCategory}>
-            <Ionicons name="ice-cream-outline" size={24} color="#f2ece3" />
-            <Text style={{ color: "#f2ece3" }}>Sorvete</Text>
-          </View>
-        </View>
-        <View
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.pesquisa}>
           <View
             style={{
-              width: "95%",
-              height: 100,
-              backgroundColor: "#f2ece3",
-              borderRadius: 20,
-              shadowColor: "#662520",
-              shadowOffset: {
-                width: 0,
-                height: 6,
-              },
-              shadowOpacity: 0.7,
-              shadowRadius: 8.3,
-              elevation: 13,
-              flexDirection: "row",
-              borderRadius: 20,
-              overflow: "hidden",
+              position: "relative",
+              top: "30%",
+              width: "100%",
+              height: 390,
+            }}
+          >
+            <Carousel
+              data={data}
+              renderItem={CarouselCardItem}
+              sliderWidth={390}
+              itemWidth={390}
+              autoplay={true}
+              autoplayInterval={3000}
+              loop={true}
+              layout={"tinder"}
+              layoutCardOffset={`9`}
+            />
+          </View>
+        </View>
+        <View
+          style={{
+            flex: 1,
+            padding: 10,
+            marginTop: "30%",
+          }}
+        >
+          <TxtComponent txt="Categorias" styletxt={styles.txtproduto} />
+
+          <View style={styles.areaCategory}>
+            {/*produtos: donuts*/}
+            <View style={styles.productsCategory}>
+              <MaterialCommunityIcons
+                name="record-circle-outline"
+                size={24}
+                color="#f2ece3"
+              />
+              <Text style={{ color: "#f2ece3" }}>Donuts</Text>
+            </View>
+            {/*produtos: bolo*/}
+            <View style={styles.productsCategory}>
+              <FontAwesome6 name="cake-candles" size={24} color="#f2ece3" />
+              <Text style={{ color: "#f2ece3" }}>Bolo</Text>
+            </View>
+            {/*produtos: brownie*/}
+            <View style={styles.productsCategory}>
+              <Feather name="square" size={24} color="#f2ece3" />
+              <Text style={{ color: "#f2ece3" }}>brownie</Text>
+            </View>
+            {/*produtos: sorvete*/}
+            <View style={styles.productsCategory}>
+              <Ionicons name="ice-cream-outline" size={24} color="#f2ece3" />
+              <Text style={{ color: "#f2ece3" }}>Sorvete</Text>
+            </View>
+          </View>
+          <View
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
             }}
           >
             <View
               style={{
-                width: "30%",
-                height: "100%",
-                backgroundColor: "#662520",
-
-                justifyContent: "center",
-                alignItems: "center",
+                width: "95%",
+                height: 100,
+                backgroundColor: "#f2ece3",
+                borderRadius: 20,
+                shadowColor: "#662520",
+                shadowOffset: {
+                  width: 0,
+                  height: 6,
+                },
+                shadowOpacity: 0.7,
+                shadowRadius: 8.3,
+                elevation: 13,
+                flexDirection: "row",
+                borderRadius: 20,
+                overflow: "hidden",
+                margin: 10,
               }}
             >
-              <Image
+              <View
                 style={{
-                  width: "95%",
-                  height: "95%",
+                  width: "30%",
+                  height: "100%",
+                  backgroundColor: "#662520",
+
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
-                source={require("../assets/image/donutsNotBack.png")}
-              />
+              >
+                <Image
+                  style={{
+                    width: "95%",
+                    height: "95%",
+                  }}
+                  source={require("../assets/image/donutsNotBack.png")}
+                />
+              </View>
+              <View
+                style={{
+                  flex: 1,
+                  backgroundColor: "#f2ece3",
+                  padding: 10,
+                  justifyContent: "center",
+                }}
+              >
+                <Text style={{ color: "#662520" }}>DONUTS BEM LOKO!</Text>
+              </View>
             </View>
+
             <View
               style={{
-                flex: 1,
+                width: "95%",
+                height: 100,
                 backgroundColor: "#f2ece3",
-                padding: 10,
-                justifyContent: "center",
+                borderRadius: 20,
+                shadowColor: "#662520",
+                shadowOffset: {
+                  width: 0,
+                  height: 6,
+                },
+                shadowOpacity: 0.7,
+                shadowRadius: 8.3,
+                elevation: 13,
+                flexDirection: "row",
+                borderRadius: 20,
+                overflow: "hidden",
+                margin: 10,
               }}
             >
-              <Text style={{ color: "#662520" }}>DONUTS BEM LOKO!</Text>
+              <View
+                style={{
+                  width: "30%",
+                  height: "100%",
+                  backgroundColor: "#662520",
+
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  style={{
+                    width: "95%",
+                    height: "95%",
+                  }}
+                  source={require("../assets/image/donutsNotBack.png")}
+                />
+              </View>
+              <View
+                style={{
+                  flex: 1,
+                  backgroundColor: "#f2ece3",
+                  padding: 10,
+                  justifyContent: "center",
+                }}
+              >
+                <Text style={{ color: "#662520" }}>DONUTS BEM LOKO!</Text>
+              </View>
+            </View>
+
+            <View
+              style={{
+                width: "95%",
+                height: 100,
+                backgroundColor: "#f2ece3",
+                borderRadius: 20,
+                shadowColor: "#662520",
+                shadowOffset: {
+                  width: 0,
+                  height: 6,
+                },
+                shadowOpacity: 0.7,
+                shadowRadius: 8.3,
+                elevation: 13,
+                flexDirection: "row",
+                borderRadius: 20,
+                overflow: "hidden",
+                margin: 10,
+              }}
+            >
+              <View
+                style={{
+                  width: "30%",
+                  height: "100%",
+                  backgroundColor: "#662520",
+
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  style={{
+                    width: "95%",
+                    height: "95%",
+                  }}
+                  source={require("../assets/image/donutsNotBack.png")}
+                />
+              </View>
+              <View
+                style={{
+                  flex: 1,
+                  backgroundColor: "#f2ece3",
+                  padding: 10,
+                  justifyContent: "center",
+                }}
+              >
+                <Text style={{ color: "#662520" }}>DONUTS BEM LOKO!</Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }

@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    height: "30%",
+    height: "20%",
     backgroundColor: "#662520",
     borderBottomLeftRadius: 500,
     borderBottomRightRadius: 500,
@@ -50,5 +50,16 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     alignItems: "center",
     justifyContent: "center",
+  },
+
+  backgroundPageSobre: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  imgPageSobre: {
+    flex: 1,
+    resizeMode: "contain",
   },
 });

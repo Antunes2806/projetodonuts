@@ -6,20 +6,21 @@ import { EvilIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Donuts() {
+export default function Donutsoreo() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <View style={styles.viewmodelo}>
+      <View style={styles.viewmodelo1}>
         <Image
           style={{
             top: 100,
             alignItems: "center",
             right: 50,
-            width: "110%",
-            height: "110%",
+            width: "75%",
+            height: "120%",
+            left: 0,
           }}
-          source={require("../assets/image/donutsmorango.png")}
+          source={require("../assets/image/dntoreo1.png")}
         />
       </View>
       <View>
@@ -41,7 +42,7 @@ export default function Donuts() {
       <View
         style={{
           flexDirection: "row",
-          backgroundColor: "#e57d90",
+          backgroundColor: "black",
           width: 70,
           top: 50,
           left: 30,
@@ -51,19 +52,19 @@ export default function Donuts() {
           justifyContent: "center",
         }}
       >
-        <FontAwesome name="star" size={20} color="black" />
-        <Text>4.3</Text>
+        <FontAwesome name="star" size={20} color="white" />
+        <Text style={{color: "white"}}>4.3</Text>
       </View>
 
       <Text
         style={{
-          color: "#662520",
+          color: "#3e2217",
           fontSize: 35,
           top: 60,
           left: 30,
         }}
       >
-        Donuts de Morango
+        Donuts de Oreo
       </Text>
 
       <Text
@@ -84,16 +85,15 @@ export default function Donuts() {
           color: "gray",
         }}
       >
-        Delicie-se com nosso Donut de Morango! Coberto com uma suave glacê rosa
-        e decorado com listras brancas e pedaços de morango desidratado, este
-        donut é uma explosão de sabor e uma verdadeira festa para os olhos.
-        Perfeito para qualquer ocasião!
+        Delicie-se com nosso Donut de Oreo! Com uma massa macia, 
+        cobertura de chocolate, pedaços de biscoito Oreo e calda de 
+        chocolate, é a combinação perfeita para os amantes de Oreo.
       </Text>
 
       <View style={{ flexDirection: "row" }}>
         <View
           style={{
-            backgroundColor: "#e57d90",
+            backgroundColor: "black",
             width: 90,
             height: 30,
             borderRadius: 30,
@@ -103,24 +103,24 @@ export default function Donuts() {
             left: 30,
           }}
         >
-          <Text style={{ fontSize: 15 }}>R$14,99</Text>
+          <Text style={{ fontSize: 15, color:"white" }}>R$14,99</Text>
         </View>
-        
-          <TouchableOpacity
-            style={{
-              backgroundColor: "#662520",
-              width: 200,
-              height: 60,
-              borderRadius: 30,
-              top: 140,
-              left: 100,
-              justifyContent: "center",
-            }}
-          >
-            <Text style={{ textAlign: "center", color: "white", fontSize: 25 }}>
-              Adicionar
-            </Text>
-          </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{
+            backgroundColor: "#3e2217",
+            width: 200,
+            height: 60,
+            borderRadius: 30,
+            top: 140,
+            left: 100,
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ textAlign: "center", color: "white", fontSize: 25 }}>
+            Adicionar
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

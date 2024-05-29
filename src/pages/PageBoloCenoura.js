@@ -6,11 +6,11 @@ import { EvilIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function PageBoloMorango() {
+export default function PageBoloCenoura() {
   const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, backgroundColor: "#800000" }}>
-      <View style={styles.viewmodelo3}>
+    <View style={styles.containercenoura}>
+      <View style={styles.viewmodelocenoura1}>
         <View style={styles.cssicons}>
           <TouchableOpacity onPress={() => navigation.navigate("Home")}>
             <EvilIcons name="arrow-left" size={45} color="#f2ece3" />
@@ -19,31 +19,27 @@ export default function PageBoloMorango() {
         </View>
         <View style={styles.imgbolo}>
           <Image
-            style={{
-              width: 400,
-              height: 400,
-            }}
-            source={require("../assets/image/bolomorango.png")}
+            style={styles.imgbolocenoura}
+            source={require("../assets/image/bolocenoura.png")}
             resizeMode="cover"
           />
         </View>
       </View>
       <View style={styles.view2morango}>
-        <Text style={styles.titulo}>Bolo de Ninho com Morango</Text>
+        <Text style={styles.titulobolocenoura}>
+          Bolo de Cenoura com cobertura de Chocolate
+        </Text>
         <Text style={styles.sobre}>About</Text>
         <Text style={styles.txtdescricaomorango}>
-          Desfrute do nosso Bolo de Leite Ninho com Morango! Feito com camadas
-          macias de pão de ló, recheio cremoso de Leite Ninho e pedaços de
-          morango fresco. Coberto com chantilly e decorado com um morango
-          inteiro.
+        O bolo de cenoura com cobertura de chocolate é uma delícia clássica, com massa fofinha e úmida feita de cenouras frescas, e uma cobertura espessa e brilhante de chocolate. A combinação do sabor suave das cenouras com a cremosidade do chocolate cria uma experiência irresistível e nostálgica.
         </Text>
 
         <View style={{ flexDirection: "row" }}>
-          <View style={styles.fundovalor}>
+          <View style={styles.fundovalorbolocenoura}>
             <Text style={{ fontSize: 15, color: "white" }}>R$14,99</Text>
           </View>
 
-          <TouchableOpacity style={styles.btnadcbolo}>
+          <TouchableOpacity style={styles.btnadcbolocenoura}>
             <Text style={{ textAlign: "center", color: "white", fontSize: 25 }}>
               Adicionar
             </Text>

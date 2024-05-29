@@ -32,13 +32,7 @@ const data = [
 
 function CarouselCardItem({ item }) {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View style={styles.viewimg}>
       <Image source={item.imgUrl} style={styles.img} resizeMode="stretch" />
     </View>
   );
@@ -51,14 +45,7 @@ export default function Home() {
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.pesquisa}>
-          <View
-            style={{
-              position: "relative",
-              top: "30%",
-              width: "100%",
-              height: 390,
-            }}
-          >
+          <View style={styles.carrosel}>
             <Carousel
               data={data}
               renderItem={CarouselCardItem}
@@ -72,13 +59,7 @@ export default function Home() {
             />
           </View>
         </View>
-        <View
-          style={{
-            flex: 1,
-            padding: 10,
-            marginTop: "30%",
-          }}
-        >
+        <View style={styles.viewtotal}>
           <TxtComponent txt="Donuts Dreams" styletxt={styles.txttitle} />
 
           <TxtComponent txt="Categorias" styletxt={styles.txtproduto} />
@@ -96,7 +77,6 @@ export default function Home() {
             {/*produtos: bolo*/}
             <View
               style={styles.productsCategory}
-              onTouchStart={() => navigation.navigate("Bolos")}
             >
               <FontAwesome6 name="cake-candles" size={24} color="#f2ece3" />
               <Text style={{ color: "#f2ece3" }}>Bolo</Text>
@@ -112,151 +92,45 @@ export default function Home() {
               <Text style={{ color: "#f2ece3" }}>Sorvete</Text>
             </View>
           </View>
-          <View
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-            }}
-          >
+          <View style={styles.viewtotal2}>
             <View>
               <TxtComponent txt="Donuts" styletxt={styles.txtdonuts} />
             </View>
             <View
-              style={{
-                width: "95%",
-                height: 100,
-                backgroundColor: "#f2ece3",
-                borderRadius: 20,
-                shadowColor: "#662520",
-                shadowOffset: {
-                  width: 0,
-                  height: 6,
-                },
-                shadowOpacity: 0.7,
-                shadowRadius: 8.3,
-                elevation: 13,
-                flexDirection: "row",
-                borderRadius: 20,
-                overflow: "hidden",
-                margin: 10,
-              }}
+              style={styles.inputpricipal}
               onTouchStart={() => navigation.navigate("Donuts")}
             >
-              <View
-                style={{
-                  width: "30%",
-                  height: "100%",
-                  backgroundColor: "#662520",
-
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+              <View style={styles.viewimgH}>
                 <Image
-                  style={{
-                    width: "130%",
-                    height: "100%",
-                    left: -10,
-                  }}
+                  style={styles.imgHome}
                   source={require("../assets/image/donutsmorango.png")}
                 />
               </View>
-              <View
-                style={{
-                  flex: 1,
-                  backgroundColor: "#f2ece3",
-                  padding: 10,
-                  justifyContent: "center",
-                }}
-              >
+              <View style={styles.txtdnthome}>
                 <Text style={{ color: "#662520" }}>DONUTS DE MORANGO</Text>
               </View>
             </View>
 
             <View
-              style={{
-                width: "95%",
-                height: 100,
-                backgroundColor: "#f2ece3",
-                borderRadius: 20,
-                shadowColor: "#662520",
-                shadowOffset: {
-                  width: 0,
-                  height: 6,
-                },
-                shadowOpacity: 0.7,
-                shadowRadius: 8.3,
-                elevation: 13,
-                flexDirection: "row",
-                borderRadius: 20,
-                overflow: "hidden",
-                margin: 10,
-              }}
+              style={styles.inputpricipal}
               onTouchStart={() => navigation.navigate("Donutschoc")}
             >
-              <View
-                style={{
-                  width: "30%",
-                  height: "100%",
-                  backgroundColor: "#662520",
-
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+              <View style={styles.viewimgH}>
                 <Image
-                  style={{
-                    width: "95%",
-                    height: "95%",
-                    bottom: 10,
-                  }}
+                  style={styles.imgHome2}
                   source={require("../assets/image/chocdonuts.png")}
                 />
               </View>
-              <View
-                style={{
-                  flex: 1,
-                  backgroundColor: "#f2ece3",
-                  padding: 10,
-                  justifyContent: "center",
-                }}
-              >
+              <View style={styles.txtdnthome}>
                 <Text style={{ color: "#662520" }}>DONUTS DE CHOCOLATE</Text>
               </View>
             </View>
 
             <View
-              style={{
-                width: "95%",
-                height: 100,
-                backgroundColor: "#f2ece3",
-                borderRadius: 20,
-                shadowColor: "#662520",
-                shadowOffset: {
-                  width: 0,
-                  height: 6,
-                },
-                shadowOpacity: 0.7,
-                shadowRadius: 8.3,
-                elevation: 13,
-                flexDirection: "row",
-                borderRadius: 20,
-                overflow: "hidden",
-                margin: 10,
-              }}
+              style={styles.inputpricipal}
               onTouchStart={() => navigation.navigate("Donutsoreo")}
             >
-              <View
-                style={{
-                  width: "30%",
-                  height: "100%",
-                  backgroundColor: "#662520",
-
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+              <View style={styles.viewimgH}>
                 <Image
                   style={{
                     width: "90%",
@@ -265,14 +139,7 @@ export default function Home() {
                   source={require("../assets/image/dntoreo1.png")}
                 />
               </View>
-              <View
-                style={{
-                  flex: 1,
-                  backgroundColor: "#f2ece3",
-                  padding: 10,
-                  justifyContent: "center",
-                }}
-              >
+              <View style={styles.txtdnthome}>
                 <Text style={{ color: "#662520" }}>DONUTS DE OREO</Text>
               </View>
             </View>
@@ -283,37 +150,10 @@ export default function Home() {
         <View style={styles.bolos}>
           <TxtComponent txt="Bolos" styletxt={styles.txtbolo} />
           <View
-            style={{
-              width: "95%",
-              height: 100,
-              backgroundColor: "#f2ece3",
-              borderRadius: 20,
-              shadowColor: "#662520",
-              shadowOffset: {
-                width: 0,
-                height: 6,
-              },
-              shadowOpacity: 0.7,
-              shadowRadius: 8.3,
-              elevation: 13,
-              flexDirection: "row",
-              borderRadius: 20,
-              overflow: "hidden",
-              margin: 10,
-              bottom: 100,
-            }}
+            style={styles.inputpricipalbolo}
             onTouchStart={() => navigation.navigate("PageBoloMorango")}
           >
-            <View
-              style={{
-                width: "30%",
-                height: "100%",
-                backgroundColor: "#662520",
-
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <View style={styles.viewimgH}>
               <Image
                 style={{
                   width: "100%",
@@ -323,48 +163,15 @@ export default function Home() {
                 source={require("../assets/image/bolomorango.png")}
               />
             </View>
-            <View
-              style={{
-                flex: 1,
-                backgroundColor: "#f2ece3",
-                padding: 10,
-                justifyContent: "center",
-              }}
-            >
+            <View style={styles.txtdnthome}>
               <Text style={{ color: "#662520" }}>MORANGO COM NINHO</Text>
             </View>
           </View>
           <View
-            style={{
-              width: "95%",
-              height: 100,
-              backgroundColor: "#f2ece3",
-              borderRadius: 20,
-              shadowColor: "#662520",
-              shadowOffset: {
-                width: 0,
-                height: 6,
-              },
-              shadowOpacity: 0.7,
-              shadowRadius: 8.3,
-              elevation: 13,
-              flexDirection: "row",
-              borderRadius: 20,
-              overflow: "hidden",
-              margin: 10,
-              bottom: 100,
-            }}
+            style={styles.inputpricipalbolo}
+            onTouchStart={() => navigation.navigate("PageBoloCenoura")}
           >
-            <View
-              style={{
-                width: "30%",
-                height: "100%",
-                backgroundColor: "#662520",
-
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <View style={styles.viewimgH}>
               <Image
                 style={{
                   width: "95%",
@@ -374,68 +181,23 @@ export default function Home() {
                 source={require("../assets/image/bolocenoura.png")}
               />
             </View>
-            <View
-              style={{
-                flex: 1,
-                backgroundColor: "#f2ece3",
-                padding: 10,
-                justifyContent: "center",
-              }}
-            >
+            <View style={styles.txtdnthome}>
               <Text style={{ color: "#662520" }}>
                 CENOURA COM COBERTURA DE CHOCOLATE
               </Text>
             </View>
           </View>
           <View
-            style={{
-              width: "95%",
-              height: 100,
-              backgroundColor: "#f2ece3",
-              borderRadius: 20,
-              shadowColor: "#662520",
-              shadowOffset: {
-                width: 0,
-                height: 6,
-              },
-              shadowOpacity: 0.7,
-              shadowRadius: 8.3,
-              elevation: 13,
-              flexDirection: "row",
-              borderRadius: 20,
-              overflow: "hidden",
-              margin: 10,
-              bottom: 100,
-            }}
+            style={styles.inputpricipalbolo}
+            onTouchStart={() => navigation.navigate("PageBoloChocolate")}
           >
-            <View
-              style={{
-                width: "30%",
-                height: "100%",
-                backgroundColor: "#662520",
-
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <View style={styles.viewimgH}>
               <Image
-                style={{
-                  width: "110%",
-                  height: "110%",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+                style={styles.imgbolochoc}
                 source={require("../assets/image/bolochoc.png")}
               />
             </View>
-            <View
-              style={{
-                flex: 1,
-                backgroundColor: "#f2ece3",
-                padding: 10,
-                justifyContent: "center",
-              }}
-            >
+            <View style={styles.txtdnthome}>
               <Text style={{ color: "#662520" }}>CHOCOLATE</Text>
             </View>
           </View>

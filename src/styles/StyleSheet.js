@@ -646,7 +646,6 @@ export const styles = StyleSheet.create({
   carro: {
     width: "80%",
     height: 100,
-    left: 50,
     backgroundColor: "#f2ece3",
     borderRadius: 20,
     shadowColor: "#662520",
@@ -664,10 +663,29 @@ export const styles = StyleSheet.create({
     top: 60,
   },
 
-  imgcarrodnt: {
-    width: "70%",
+  viewimgC: {
+    width: "30%",
     height: "100%",
-    right: 100,
+    backgroundColor: "#662520",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  imgcarrodnt: {
+    width: "150%",
+    height: "100%",
+    left: -10,
+  },
+
+  imgcarrodnt2: {
+    width: "100%",
+    height: "100%",
+  },
+
+  imgcarrodnt3: {
+    width: "110%",
+    height: "100%",
+    bottom: 10,
   },
 
   txtcarrinho: {
@@ -675,23 +693,25 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#662520",
     top: 50,
+    right: 120,
   },
 
   txtdonutsmorcarro: {
     fontSize: 20,
     alignItems: "center",
     justifyContent: "center",
-    right: 130,
     top: 10,
   },
 
   valor: {
-    right: 100,
     top: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    padding:5,
   },
 
   footer: {
-    backgroundColor: "#662520",
+    backgroundColor: "#702b26",
     width: "100%",
     height: "100%",
     top: 180,
@@ -703,7 +723,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     left: 30,
     top: 30,
-    fontWeight:"bold",
+    fontWeight: "bold",
   },
   itens: {
     color: "white",

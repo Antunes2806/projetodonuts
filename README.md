@@ -4,4 +4,4 @@ Bem-vindo ao Donut Dreams! Seu lugar ideal para comprar os mais deliciosos donut
 
 🚀 Instalação
 Pré-requisitos
-- Entre na sua maquina virtual e coloque o seguinte comando ´´´ "CTRL + ALT + t" ´´´ 
+- Entre na sua maquina virtual e coloque o seguinte comando ``` "CTRL + ALT + t" ```

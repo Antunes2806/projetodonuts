@@ -8,7 +8,7 @@ Pré-requisitos
 - Após isso clone este repositório na pasta criada com este comando ``` " git clone https://github.com/Antunes2806/projetodonuts.git "```;
 - Entre na pasta com o comando ``` "cd ~/nomedapasta" ```e ative o node;
 - Digite o seguinte comando ``` "npx expo install react-native-web react-dom @expo/metro-runtime" ```para instalar as dependências necessárias para executar o aplicativo no navegador;
-- Digite ``` "code ." para abrir o VisualCode;
+- Digite ``` "code ."``` para abrir o VisualCode;
 - Digite o comando ``` "npx expo start --tunnel" ``` para rodar o código em conexões externas.
 
 🔧 Configuração
